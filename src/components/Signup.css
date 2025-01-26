@@ -1,0 +1,83 @@
+/* Base Styles (for Desktop and Large Screens) */
+.container {
+    background: linear-gradient(to bottom, #f7f9fc, #e2f3ff); /* Gradient background */
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    text-align: center;
+  }
+  
+
+  .card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 20px; /* More rounded corners */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .input {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 12px; /* Rounded corners for input */
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    font-size: 18px;
+    outline: none;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease; /* Smooth transition for all changes */
+    box-sizing: border-box; /* Ensures padding is inside the width */
+  }
+  
+  .input:focus {
+    border-color: #4A90E2;
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.3); /* Subtle glow effect */
+    background-color: #fff; /* Lighter background color when focused */
+  }
+  
+  .input::placeholder {
+    color: #bbb; /* Softer color for placeholder */
+    font-style: italic;
+  }
+  
+  .button {
+    background-color: #4A90E2;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    box-shadow: 0 8px 15px rgba(74, 144, 226, 0.2); /* Soft shadow */
+  }
+  
+  .button:hover {
+    background-color: #357ABD;
+    transform: translateY(-2px); /* Slight lift effect */
+  }
+  
+  .button:active {
+    transform: translateY(0); /* Smooth transition for button press */
+  }
+
+  .radio-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  label {
+    /* text-align: left; */
+    display: flex;
+    align-self: flex-start;
+  }
