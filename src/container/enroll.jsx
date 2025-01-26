@@ -32,7 +32,7 @@ class Enroll extends React.Component{
         return (
             <div className="enroll">
                 <h1>Enroll user Data</h1>
-                <label>Name</label>
+                <label className="label">Name</label>
                 <br></br>
                 <input required type="text" value={this.state.Name} onChange={(e)=>{
                     this.setState({
@@ -40,7 +40,7 @@ class Enroll extends React.Component{
                     })
                 }} size="50" className="input"></input>
                 <br></br>
-                <label>Date of Birth</label>
+                <label className="label">Date of Birth</label>
                 <br></br>
                 <input required type="Date" value={this.state.Dateofbirth} onChange={(e)=>{
                     this.setState({
@@ -48,13 +48,35 @@ class Enroll extends React.Component{
                     })
                 }} size="50" className="input"></input>
                 <br></br>
-                <label>Place</label>
-                <input required type="text" value={this.state.Place} OnChange={(e)=>{
+                <label className="label">Place</label>
+                <input required type="text" value={this.state.Place} onChange={(e)=>{
                     this.setState({
                         Place:e.target.value
                     })
                 }} size="50" className="input"></input>
                 <button onClick={this.handleSubmit.bind(this)}>Enroll</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Index</th>
+                            <th>Name</th>
+                            <th>Date of Birth</th>
+                            <th>Place</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {
+                        this.state.enli.map(function(enrol,index){
+                            return(
+                            <tr key={'enrol-'+index}>
+                                <td>{index}</td>
+                                <td>{enrol}</td>
+                            </tr>);
+
+                        })
+                    }
+                    </tbody>
+                </table>
             </div>
         );
     }

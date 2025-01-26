@@ -1,0 +1,34 @@
+.enroll{
+    background: linear-gradient(to bottom, #f7f9fc, #e2f3ff); /* Gradient background */
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    text-align: center;
+
+}
+.label {
+    display: flex;
+    align-self: 'flex-start';
+}
+button {
+    background-color: #4A90E2;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    box-shadow: 0 8px 15px rgba(74, 144, 226, 0.2); /* Soft shadow */
+}
+table,thead,td{
+    border:1px solid;
+    width:100%;
+    margin-top:20px;
+}
