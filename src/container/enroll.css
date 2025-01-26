@@ -13,6 +13,30 @@
 .label {
     display: flex;
     align-self: 'flex-start';
+    margin-bottom: 6px;
+}
+.input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px; /* Rounded corners for input */
+    margin-bottom: 10px;
+    border: 2px solid #ddd;
+    font-size: 16px;
+    outline: none;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease; /* Smooth transition for all changes */
+    box-sizing: border-box; /* Ensures padding is inside the width */
+  }
+  
+  .input:focus {
+    border-color: #4A90E2;
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.3); /* Subtle glow effect */
+    background-color: #fff; /* Lighter background color when focused */
+  }
+  
+  .input::placeholder {
+    color: #bbb; /* Softer color for placeholder */
+    font-style: italic;
 }
 button {
     background-color: #4A90E2;
@@ -25,10 +49,48 @@ button {
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.3s ease;
     width: 100%;
+    margin-top: 16px;
     box-shadow: 0 8px 15px rgba(74, 144, 226, 0.2); /* Soft shadow */
 }
-table,thead,td{
-    border:1px solid;
-    width:100%;
-    margin-top:20px;
+.button:hover {
+    background-color: #357ABD;
+    transform: translateY(-2px); /* Slight lift effect */
+  }
+  
+  .button:active {
+    transform: translateY(0); /* Smooth transition for button press */
+  }
+table {
+    border-collapse: collapse;
+    width: 100%; /* Increased width for a more balanced appearance */
+    margin: 30px auto; /* Center the table */
+}
+
+thead {
+    background-color: #4CAF50; /* Nice green background */
+    color: white; /* White text for contrast */
+    text-align: left; /* Align header text to the left */
+    font-weight: bold; /* Bold font for header */
+}
+
+thead th {
+    padding: 20px;
+}
+
+td {
+    border: 1px solid #ddd; /* Light border for table cells */
+    padding: 8px; /* Add padding inside cells */
+    text-align: left; /* Align text to the left */
+    padding: 10px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternating row colors */
+}
+
+tbody tr:hover {
+    background-color: #ddd; /* Highlight row on hover */
+}
+.error{
+    color:red;
 }
