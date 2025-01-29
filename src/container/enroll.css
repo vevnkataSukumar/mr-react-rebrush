@@ -1,6 +1,6 @@
 .enroll{
     background: linear-gradient(to bottom, #f7f9fc, #e2f3ff); /* Gradient background */
-    padding: 50px 20px;
+    padding: 0px 0px 20px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,4 +93,23 @@ tbody tr:hover {
 }
 .error{
     color:red;
+}
+
+.header {
+    display: flex;
+    align-self: stretch;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: lavender;
+    padding: 2px;
+}
+
+.user-login {
+    font-size: 12px;
+    color: black;
+}
+
+.email {
+    color: rgb(33, 6, 237);
 }

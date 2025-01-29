@@ -1,30 +1,36 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Page from './Page';
 import SignIn from './components/Singin';
 import CounterPage from './container/CounterPage';
 import NewPage from './container/NewPage';
 import Todolist from './container/TodoList';
 import Enroll from './container/enroll';
+import NewAppPage from './components/NewAppPage';
+import ProductDetailsPage from './components/LoadPage';
+import Loginpage from './components/Greet';
 
 class App extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
   }
 
   render() {
     return (
-      <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<SignIn />} />
-        <Route path='/home' element={<Page />}/>
-        <Route path='/counter' element={<CounterPage />}/>
-        <Route path='/newpage' element={<NewPage />} />
-        <Route path='/todo' element={<Todolist />} />
-        <Route path='/enro' element={<Enroll />} />
-      </Routes>
-      </BrowserRouter>
+      <Router>
+        <Routes>
+          <Route path='/' element={<SignIn />} />
+          <Route path='/home' element={<Page />} />
+          <Route path='/counter' element={<CounterPage />} />
+          <Route path='/newpage' element={<NewPage />} />
+          <Route path='/todo' element={<Todolist />} />
+          <Route path='/enro' element={<Enroll intialValue={'Hello'}/>} />
+          <Route path='/newApp' element={<NewAppPage />} />
+          <Route path='/product' element={<ProductDetailsPage />} />
+          <Route path='/Login' element={<Loginpage />} />
+        </Routes>
+      </Router>
     );
   }
 }

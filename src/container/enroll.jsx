@@ -1,5 +1,6 @@
 import React from "react";
 import "./enroll.css";
+import { withRouter } from "../util";
 class Enroll extends React.Component {
     constructor(props) {
         super(props);
@@ -8,10 +9,11 @@ class Enroll extends React.Component {
             name: "",
             dateofbirth: "",
             place: "",
-            errorName: "",
-            errorDateofbirth: "",
-            errorPlace: ""
-        }
+            // errorName: "",
+            // errorDateofbirth: "",
+            // errorPlace: ""
+        };
+        
     }
 
     resetState = () => {
@@ -23,15 +25,14 @@ class Enroll extends React.Component {
     }
 
     handleSubmit() {
-        console.log(this.state);
         if (
-            this.state.name.length === 0 && 
-            this.state.dateofbirth.length === 0 && 
+            this.state.name.length === 0 &&
+            this.state.dateofbirth.length === 0 &&
             this.state.place.length === 0
         ) {
             return;
         }
-        
+
         if (
             this.state.name.length > 0 &&
             this.state.dateofbirth.length > 0 &&
@@ -49,45 +50,21 @@ class Enroll extends React.Component {
                 name: '',
                 dateofbirth: '',
                 place: '',
-            }
-            // , function () {
-            //     console.log(this.state.userList);
-            // }
-            );
+            });
         }
-        // this.setState({
-        //     errorName: "",
-        //     errorDateofbirth: "",
-        //     errorPlace: ""
-        // });
-        // const { name, dateofbirth, place } = this.state;
-        // let valid = true;
-
-        // if (name.trim() === "") {
-        //     this.setState({ errorName: "Name is required." });
-        //     valid = false;
-        // }
-        // if (dateofbirth.trim() === "") {
-        //     this.setState({ errorDateofbirth: "Date of Birth is Required." });
-        //     valid = false;
-        // }
-        // if (place.trim() === "") {
-        //     this.setState({ errorPlace: "Place is required." });
-        //     valid = false;
-        // }
-        // if (!valid) {
-        //     return;
-        // }
     }
 
     render() {
+        const data = this.props.location.state || {};
         return (
             <div className="enroll">
-                <h1>Enroll user Data</h1>
+                <div className="header">
+                    <p className="user-login">You are logged in as {data.email}</p>
+                </div>
+                <h3>Enroll user Data</h3>
                 <div className="card">
                     <label className="label">Name</label>
                     <input required type="text" value={this.state.name} onChange={(e) => {
-
                         this.setState({
                             name: e.target.value
                         })
@@ -138,4 +115,32 @@ class Enroll extends React.Component {
         );
     }
 }
-export default Enroll;
+
+const EnrollPage = withRouter(Enroll);
+
+export default EnrollPage;
+
+
+// this.setState({
+//     errorName: "",
+//     errorDateofbirth: "",
+//     errorPlace: ""
+// });
+// const { name, dateofbirth, place } = this.state;
+// let valid = true;
+
+// if (name.trim() === "") {
+//     this.setState({ errorName: "Name is required." });
+//     valid = false;
+// }
+// if (dateofbirth.trim() === "") {
+//     this.setState({ errorDateofbirth: "Date of Birth is Required." });
+//     valid = false;
+// }
+// if (place.trim() === "") {
+//     this.setState({ errorPlace: "Place is required." });
+//     valid = false;
+// }
+// if (!valid) {
+//     return;
+// }

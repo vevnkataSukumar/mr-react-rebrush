@@ -1,7 +1,7 @@
 /* Base Styles (for Desktop and Large Screens) */
 .container {
     background: linear-gradient(to bottom, #f7f9fc, #e2f3ff); /* Gradient background */
-    padding: 50px 20px;
+    padding: 0px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,13 +36,14 @@
   .label {
     display: flex;
     align-self: 'flex-start';
+    margin-bottom: 0px;
   }
   
-  .input {
+  input {
     width: 100%;
     padding: 14px 20px;
     border-radius: 12px; /* Rounded corners for input */
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     border: 2px solid #ddd;
     font-size: 18px;
     outline: none;
