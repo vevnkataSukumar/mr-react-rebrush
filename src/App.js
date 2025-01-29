@@ -10,7 +10,8 @@ import Enroll from './container/enroll';
 import NewAppPage from './components/NewAppPage';
 import ProductDetailsPage from './components/LoadPage';
 import Loginpage from './components/Greet';
-
+import NewApp from './components/NewAppFuc';
+import NewproductCard from './components/NewProductcard';
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -25,10 +26,11 @@ class App extends React.Component {
           <Route path='/counter' element={<CounterPage />} />
           <Route path='/newpage' element={<NewPage />} />
           <Route path='/todo' element={<Todolist />} />
-          <Route path='/enro' element={<Enroll intialValue={'Hello'}/>} />
+          <Route path='/enro' element={<Enroll />} />
           <Route path='/newApp' element={<NewAppPage />} />
           <Route path='/product' element={<ProductDetailsPage />} />
           <Route path='/Login' element={<Loginpage />} />
+          <Route path="/newAppFunc" element={<NewApp />} />
         </Routes>
       </Router>
     );

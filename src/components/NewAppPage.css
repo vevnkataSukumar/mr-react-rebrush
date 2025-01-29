@@ -1,44 +1,43 @@
 .products-list {
     display: flex;
     flex-direction: row;
-    
 }
 .product-card {
     width: 100%;
-    height: 160px;
-    border: none;
-    border-radius:5px;
-    box-shadow: 4px 4px 8px 8px rgba(0,0,0,0.2);
-    background-color: #444;
-    margin:20px;
+    border-radius:10px;
+    /*box-shadow: 4px 4px 8px 8px rgba(0,0,0,0.2);*/
+    margin: 0px 12px;
     cursor:pointer;
-
+    padding-bottom: 10px;
+    background-color: rgb(254, 246, 246);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+    align-self: stretch;
+    font-size: 14px;
 }
 .product-card img{
-   width:240px;
-   height:180px;
+   width:200px;
+   height:160px;
    object-fit: cover;
-   border-bottom:1px solid #ddd;
-   overflow: hidden;
+   border:1px solid #ccc;
+   border-radius: 10px 10px 0px 0px;
 }
 .body{
     width:100%;
     overflow-x:auto;
     white-space:nowrap;
     border:1px solid #ccc;
-    
-    
-    
 }
 .product-description{
-    box-shadow: 4px 4px 8px 8px rgba(0,0,0,0.2);
-    background-color:white;
-    padding:20px;
-    text-align: center;
-    height:175px;
-
+    /*box-shadow: 4px 4px 8px 8px rgba(0,0,0,0.2);*/
+    padding: 0px 14px;
+    text-align: left;
+    /* height:125px; */
+   /* border: 1px solid rgb(248, 240, 240);*/
 }
-button {
+.submit {
     background-color: #4A90E2;
     color: #ffffff;
     border: none;
@@ -48,19 +47,21 @@ button {
     font-size: 18px;
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    width: 100%;
+    width: 90%;
     box-shadow: 0 8px 15px rgba(74, 144, 226, 0.2); /* Soft shadow */
-    margin-top: auto;
-
-    
+    margin: 0px 10px;
+    align-self: center;
   }
   
-  .button:hover {
+  .submit:hover {
     background-color: #357ABD;
     transform: translateY(-2px); /* Slight lift effect */
   }
   
-  .button:active {
+  .submit:active {
     transform: translateY(0); /* Smooth transition for button press */
+  }
+  .app h1{
+    text-align: center;
   }
 

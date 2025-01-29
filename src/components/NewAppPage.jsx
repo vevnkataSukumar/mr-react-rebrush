@@ -32,8 +32,9 @@ class NewAppPage extends React.Component {
         })
     }
 
-    handleSubmit = (data) => {
-        this.props.navigate('/product', {state: {...data, imageUrl: imageUrl}});
+    handleNaviagtion = (data) => {
+        const { product, imageUrl } = data;
+        this.props.navigate('/product', {state: {...product, imageUrl: imageUrl}});
     }
 
     render() {
@@ -45,21 +46,13 @@ class NewAppPage extends React.Component {
                         this.state?.productList?.map((product, index) => {
                             return (
                                 <ProductCard
-                                    // key={product.id.toString()}
-                                    key={`${product.id}`}
+                                    key={`${product?.id}`}
                                     product={product}
                                     imageUrl={imageUrl}
+                                    handleSubmit={(productprops) => {
+                                        this.handleNaviagtion(productprops);
+                                    }}
                                 />
-                                // <div className="product-card" key={index}>
-                                //     <img src={imageUrl} alt="product" />
-                                //     <div className="product-description">
-                                //         <p>{product.name}</p>
-                                //         {product.data?.capacity && (<p>{product.data?.capacity}</p>)}
-                                //         {product.data?.color && (<p>{product.data?.color}</p>)}
-                                //         {product.data?.price && (<p>{product.data?.price}</p>)}
-                                //         <button className="submit" onClick={() => this.handleSubmit(product)}>Buy</button>
-                                //     </div>
-                                // </div>
                             )
                         })
                     }
@@ -73,9 +66,20 @@ const NewPage = withRouter(NewAppPage);
 
 export default NewPage;
 
-function add(a,b){
-    return a+b;
+// <div className="product-card" key={index}>
+//     <img src={imageUrl} alt="product" />
+//     <div className="product-description">
+//         <p>{product.name}</p>
+//         {product.data?.capacity && (<p>{product.data?.capacity}</p>)}
+//         {product.data?.color && (<p>{product.data?.color}</p>)}
+//         {product.data?.price && (<p>{product.data?.price}</p>)}
+//         <button className="submit" onClick={() => this.handleSubmit(product)}>Buy</button>
+//     </div>
+// </div>
 
-}
-const Add=add(3,5);
-console.log(Add);
+// function add(a,b){
+//     return a+b;
+
+// }
+// const Add=add(3,5);
+// console.log(Add);

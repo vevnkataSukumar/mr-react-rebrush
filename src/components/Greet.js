@@ -1,21 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Singin.css";
-/*function Greet(){
-    const[count, setCount]=useState(0)
-    return(
-        <div>
-            <h1>Count</h1>
-            <button onClick={()=>setCount(count+1)}>Count {count}</button>
-        </div>
-    )
-
-}
-/*const Greet=()=>{
-    <h1>Hello Mohan</h1>
-}*/
-
-
-/*export default Greet;*/
 const Loginpage = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -23,12 +7,23 @@ const Loginpage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
         if (!email || !password) {
             setError('Please fill out both fields.');
         }
+        setEmail('');
     }
-    console.log('From Submitted:', { email, password });
+
+    useEffect(() => {
+        return () => {
+          console.log("Unmounting stage");
+        };
+      }, []);
+
+    useEffect(() => {
+        console.log('Page Side effect triggered!');
+    }, [email, password]);
+
+    // useEffect ===> componentDidMount componentDidUpdate componentWillUnmount
 
     return (
         <div className="container">
@@ -48,3 +43,19 @@ const Loginpage = () => {
 
 }
 export default Loginpage;
+
+/*function Greet(){
+    const[count, setCount]=useState(0)
+    return(
+        <div>
+            <h1>Count</h1>
+            <button onClick={()=>setCount(count+1)}>Count {count}</button>
+        </div>
+    )
+
+}
+/*const Greet=()=>{
+    <h1>Hello Mohan</h1>
+}*/
+
+/*export default Greet;*/
