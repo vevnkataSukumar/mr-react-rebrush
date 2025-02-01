@@ -12,6 +12,8 @@ import ProductDetailsPage from './components/LoadPage';
 import Loginpage from './components/Greet';
 import NewApp from './components/NewAppFuc';
 import NewproductCard from './components/NewProductcard';
+import BgAnimation from './Practice/BgAnimation';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -31,6 +33,7 @@ class App extends React.Component {
           <Route path='/product' element={<ProductDetailsPage />} />
           <Route path='/Login' element={<Loginpage />} />
           <Route path="/newAppFunc" element={<NewApp />} />
+          <Route path='/bganim' element={<BgAnimation />} />
         </Routes>
       </Router>
     );

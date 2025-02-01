@@ -1,0 +1,12 @@
+.bg-page{ 
+    background-size: 100% 100%;
+    box-shadow: 20px 20px 10px gray;
+    animation: slider 10s inner infinite;
+}
+
+@keyframes slider {
+    0%{background-image: url(https://wallpapers.com/images/hd/cherry-blossom-in-lava-p8cc9zmjtwvlmuvy.jpg);}
+    30%{background-image: url(https://c4.wallpaperflare.com/wallpaper/436/1007/746/clouds-atmosphere-lights-wallpaper-preview.jpg);}
+    60%{background-image: url(https://4kwallpapers.com/images/walls/thumbs/14420.png);}
+    100%{background-image: url(https://c4.wallpaperflare.com/wallpaper/436/1007/746/clouds-atmosphere-lights-wallpaper-preview.jpg);}
+}
