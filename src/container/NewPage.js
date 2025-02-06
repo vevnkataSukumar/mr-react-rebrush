@@ -23,6 +23,7 @@ const NewPage = () => {
   if (status === 'failed') {
     return <p>Error: {error}</p>;
   }
+  console.log('New Page');
 
   return (
     <div>

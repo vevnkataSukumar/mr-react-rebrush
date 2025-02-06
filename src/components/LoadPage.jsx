@@ -8,6 +8,7 @@ class ProductDetails extends React.Component {
     }
     render() {
         const productData = this.props.location.state || {};
+        console.log('Product Details Page');
         return (
 
             <div className="load">

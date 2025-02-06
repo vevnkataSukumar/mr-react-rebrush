@@ -1,46 +1,30 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Page from './Page';
-import SignIn from './components/Singin';
-import CounterPage from './container/CounterPage';
-import NewPage from './container/NewPage';
-import Todolist from './container/TodoList';
-import Enroll from './container/enroll';
-import NewAppPage from './components/NewAppPage';
-import ProductDetailsPage from './components/LoadPage';
-import Loginpage from './components/Greet';
-import NewApp from './components/NewAppFuc';
-import NewproductCard from './components/NewProductcard';
-import BgAnimation from './Practice/BgAnimation';
+import RouterComponent from './routes';
+import { ThemeProvider } from './contexts/themeContext';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <Router>
-        <Routes>
-          <Route path='/' element={<SignIn />} />
-          <Route path='/home' element={<Page />} />
-          <Route path='/counter' element={<CounterPage />} />
-          <Route path='/newpage' element={<NewPage />} />
-          <Route path='/todo' element={<Todolist />} />
-          <Route path='/enro' element={<Enroll />} />
-          <Route path='/newApp' element={<NewAppPage />} />
-          <Route path='/product' element={<ProductDetailsPage />} />
-          <Route path='/Login' element={<Loginpage />} />
-          <Route path="/newAppFunc" element={<NewApp />} />
-          <Route path='/bganim' element={<BgAnimation />} />
-        </Routes>
-      </Router>
-    );
-  }
+function App() {
+  return (
+    <ThemeProvider>
+      <RouterComponent />
+    </ThemeProvider>
+  )
 }
 
 export default App;
+// class App extends React.Component {
+//   constructor(props) {
+//     super(props);
+//   }
+
+//   render() {
+//     return (
+//       <div>
+//         <RouterComponent />
+//       </div>
+//     );
+//   }
+// }
 
 // const initialName = 'Sukumar';
 

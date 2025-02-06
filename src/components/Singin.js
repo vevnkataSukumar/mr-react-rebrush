@@ -29,8 +29,10 @@ class SignIn extends React.Component {
         }
     }
 
+
     render() {
         const { email, password } = this.state;
+        console.log('SignIn Page');
         return (
             <div className={'container'}>
                 <h1>Login Form</h1>

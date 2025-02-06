@@ -25,6 +25,8 @@ const Loginpage = () => {
 
     // useEffect ===> componentDidMount componentDidUpdate componentWillUnmount
 
+    console.log('Login Page');
+
     return (
         <div className="container">
             <h1>Login Form</h1>

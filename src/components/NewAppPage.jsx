@@ -1,9 +1,17 @@
-import React from "react";
+import React, { Suspense } from "react";
 import './NewAppPage.css';
 import { withRouter } from "../util";
 import ProductCard from './ProductCard';
 
 const imageUrl = "https://www.trustedreviews.com/wp-content/uploads/sites/54/2023/08/Best-smartphone-2.jpg";
+
+const Loading = () => {
+    return (
+        <div>
+            <h2>Loading.......</h2>
+        </div>
+    )
+}
 class NewAppPage extends React.Component {
     constructor(props) {
         super(props);
@@ -38,26 +46,29 @@ class NewAppPage extends React.Component {
     }
 
     render() {
+        console.log('New App Page');
         return (
-            <div className="app">
-                <h1>New App Page</h1>
-                <div className="products-list">
-                    {
-                        this.state?.productList?.map((product, index) => {
-                            return (
-                                <ProductCard
-                                    key={`${product?.id}`}
-                                    product={product}
-                                    imageUrl={imageUrl}
-                                    handleSubmit={(productprops) => {
-                                        this.handleNaviagtion(productprops);
-                                    }}
-                                />
-                            )
-                        })
-                    }
+            <Suspense fallback={<Loading />}>
+                <div className="app">
+                    <h1>New App Page</h1>
+                    <div className="products-list">
+                        {
+                            this.state?.productList?.map((product, index) => {
+                                return (
+                                    <ProductCard
+                                        key={`${product?.id}`}
+                                        product={product}
+                                        imageUrl={imageUrl}
+                                        handleSubmit={(productprops) => {
+                                            this.handleNaviagtion(productprops);
+                                        }}
+                                    />
+                                )
+                            })
+                        }
+                    </div>
                 </div>
-            </div>
+            </Suspense>
         )
     }
 }

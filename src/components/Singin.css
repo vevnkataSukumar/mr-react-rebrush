@@ -10,6 +10,18 @@
     font-family: 'Poppins', sans-serif; /* Modern font */
     text-align: center;
   }
+
+  .theme-container {
+    background: linear-gradient(to bottom, #2f2f30, #0b0b0b); /* Gradient background */
+    padding: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    text-align: center;
+  }
   
   .header {
     color: #4A90E2;
@@ -24,6 +36,18 @@
     border-radius: 20px; /* More rounded corners */
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .theme-card {
+    background-color: #363434;
+    padding: 30px;
+    border-radius: 20px; /* More rounded corners */
+    box-shadow: 0 5px 15px 5px #5e5e5e;
+    width: 100%;
+    color: #fff;
     max-width: 400px;
     text-align: center;
     transition: box-shadow 0.3s ease;
@@ -43,7 +67,7 @@
     width: 100%;
     padding: 14px 20px;
     border-radius: 12px; /* Rounded corners for input */
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     border: 2px solid #ddd;
     font-size: 18px;
     outline: none;
@@ -85,6 +109,36 @@
   .button:active {
     transform: translateY(0); /* Smooth transition for button press */
   }
+
+  .button:disabled {
+    background-color: #888f97;
+  }
+
+  .get-otp {
+    font-size: 16px;
+    font-weight: 600;
+    color: #076ee4;
+    text-align: right;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 6px;
+  }
+
+  .get-otp-disabled {
+    font-size: 16px;
+    font-weight: 600;
+    color: #888f97;
+    text-align: right;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 6px;
+  }
+
+  .pass-strength {
+    margin: 0px;
+    margin-bottom: 8px;
+    text-align: right;
+  }
   
   .sumText {
     margin-top: 20px;
@@ -98,6 +152,13 @@
   
   .sumText:hover {
     transform: scale(1.1); /* Slight zoom effect for sum display */
+  }
+
+  .check-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 20px;
   }
   
   /* Responsive Styles for Tablets and Mobile */
