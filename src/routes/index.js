@@ -1,21 +1,21 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import SignInPage from '../components/Singin';
-import Page from '../Page';
-import CounterPage from '../container/CounterPage';
-import NewPage from '../container/NewPage';
-import Todolist from '../container/TodoList';
-import Enroll from '../container/enroll';
-import NewAppPage from '../components/NewAppPage';
-import ProductDetailsPage from '../components/LoadPage';
-import Loginpage from '../components/Greet';
-// import NewApp from '../components/NewAppFuc';
-// import NewproductCard from '../components/NewProductcard';
-import BgAnimation from '../Practice/BgAnimation';
 import { lazy, Suspense } from 'react';
-// import MyHooks from '../container/hooks';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+const SignInPage =lazy(()=>import ('../components/Singin'));
+const Page = lazy(()=>import ('../Page'));
+const CounterPage = lazy(()=>import ('../container/CounterPage'));
+const NewPage=lazy(()=>import ('../container/NewPage'));
+const Todolist=lazy(()=>import('../container/TodoList'));
+const Enroll =lazy(() => import('../container/enroll'));
+const NewAppPage =lazy(() => import('../components/NewAppPage')); ;
+const ProductDetailsPage =lazy(() => import('../components/LoadPage'));
+const Loginpage =lazy(() => import('../components/Greet'));
+const BgAnimation =lazy(()=>import('../Practice/BgAnimation'));
 const MyHooks = lazy(() => import('../container/hooks'));
 const NewApp = lazy(() => import('../components/NewAppFuc'));
 const Home = lazy(() => import('../container/Home'));
+const Newproject =lazy(() => import('./NewProject'));
+const HookCounter =lazy(() => import('./Practice'));
+const NewCard =lazy(() => import('./components/newCard'));
 
 const RouterComponent = () => {
     return (
@@ -34,6 +34,9 @@ const RouterComponent = () => {
                 <Route path='/bganim' element={<BgAnimation />} />
                 <Route path='/hooks' element={<MyHooks />} />
                 <Route path='/home' element={<Home />} />
+                <Route path="/newProject" element={<Newproject />} />
+                <Route path="/hookCounter" element={<HookCounter />} />
+                <Route path="/newcard" element={<NewCard />} />
             </Routes>
         </Router>
     )
