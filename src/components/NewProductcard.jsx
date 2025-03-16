@@ -12,7 +12,7 @@ const NewproductCard = ({ imageUrl, product, handleSubmit }) => {
                 </div>
             </div>
             <div>
-                <button className="submit" onClick={() => handleSubmit(product)}>Buy</button>
+                <button className="submit" onClick={() => handleSubmit(product)}> Buy</button>
             </div>
         </div>
     )

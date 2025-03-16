@@ -11,7 +11,9 @@ import NewAppPage from './components/NewAppPage';
 import ProductDetailsPage from './components/LoadPage';
 import Loginpage from './components/Greet';
 import NewApp from './components/NewAppFuc';
-import NewproductCard from './components/NewProductcard';
+import Newproject from './NewProject';
+import HookCounter from './Practice';
+import NewCard from './components/newCard';
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -31,6 +33,9 @@ class App extends React.Component {
           <Route path='/product' element={<ProductDetailsPage />} />
           <Route path='/Login' element={<Loginpage />} />
           <Route path="/newAppFunc" element={<NewApp />} />
+          <Route path="/newProject" element={<Newproject />} />
+          <Route path="/hookCounter" element={<HookCounter />} />
+          <Route path="/newcard" element={<NewCard />} />
         </Routes>
       </Router>
     );
