@@ -13,6 +13,7 @@ const CounterPage = () => {
         setCount((prev) => prev + 1);
       }, []); // Function is memoized
   
+      console.log('Counter Page');
     return (
       <div>
          <p>Result of expensive calculation: {expensiveCalculation}</p>

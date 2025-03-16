@@ -68,6 +68,7 @@ class Page extends React.Component {
     // Ummounting ==> compomentWillUmmount
 
     render() {
+        console.log('Home Page');
         return (
             <div>
                 <div>
