@@ -1,3 +1,5 @@
+import React from "react";
+
 const ProductCard = (props) => {
     const {imageUrl, product, handleSubmit, key} = props;
     return (
@@ -15,4 +17,4 @@ const ProductCard = (props) => {
     )
 }
 
-export default ProductCard;
+export default React.memo(ProductCard);

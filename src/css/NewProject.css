@@ -1,0 +1,141 @@
+.navbar {
+    display: flex;
+    align-self: stretch;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /*background-color: red;*/
+    /* align-items: space-between;*/
+    padding: 20px;
+    box-shadow: 0 15px 40px -20px rgba(40, 44, 63, .15);
+
+
+}
+
+.navbar img {
+    width: 65px;
+    height: fit-content;
+    border-radius: 30px;
+}
+
+.navbar ul {
+    display: flex;
+    /* flex-direction: end; */
+    list-style-type: none;
+    overflow: hidden;
+    float: right;
+    /* background-color: #333; */
+}
+
+.navbar li {
+    /* justify-content: space-evenly; */
+    margin: 0px 10px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 60px;
+}
+
+.navbar li a:hover {
+    color: orangered;
+}
+
+.content {
+    margin: 10px;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.content img {
+    width: 200px;
+}
+
+.food-section {
+    display: flex;
+
+}
+
+.food-card {
+    width: 144px;
+    height: 180px;
+    display: block;
+}
+
+.fa-solid {
+    margin-right: 10px;
+}
+
+.hea {
+    margin-left: 20px;
+}
+
+@media only screen and (max-width:600px) {
+    .navbar {
+        background-color: rgb(224, 99, 15);
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .navbar ul li {
+        margin: 20px;
+
+    }
+
+    .navbar li a {
+        color: white;
+    }
+
+    .navbar li a:hover {
+        color: black;
+    }
+
+    .hea {
+        text-align: center;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+}
+
+@media(max-width:768px) {
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .navbar ul li {
+        margin: 30px;
+    }
+
+    .hea {
+        text-align: center;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+}
+@media (max-width: 992px) and (min-width: 768px) {
+    .navbar ul {
+        display: flex;
+        flex-direction: row;
+    }
+}
